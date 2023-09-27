@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private float respawnDelay = 2f;
     [SerializeField] private bool isGameEnding = false;
+    private int score;
+    public Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +34,10 @@ public class GameManager : MonoBehaviour
         playerController.gameObject.SetActive(true);
         isGameEnding = false;
 
+    }
+    public void AddScore(int numberScore)
+    {
+        score += numberScore;
+        scoreText.text = score.ToString();
     }
 }
