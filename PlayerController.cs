@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         var gameManager = FindObjectsOfType<GameManager>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 
